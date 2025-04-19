@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="444.0" prefWidth="962.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Frontend.Products_screenController">
+   <children>
+      <TableView fx:id="products_detail_table_data" layoutX="317.0" layoutY="96.0" prefHeight="222.0" prefWidth="625.0">
+        <columns>
+          <TableColumn fx:id="item_name_Table" prefWidth="294.0" text="Item Name" />
+          <TableColumn fx:id="rate_Table" minWidth="0.0" prefWidth="206.0" text="Rate" />
+            <TableColumn fx:id="item_code_Table" prefWidth="123.0" text="Item Code" />
+        </columns>
+      </TableView>
+      <Label fx:id="item_name_Label" alignment="CENTER_RIGHT" layoutX="15.0" layoutY="131.0" prefHeight="21.0" prefWidth="83.0" text="Item Name">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="rate_Label" alignment="CENTER_RIGHT" layoutX="6.0" layoutY="196.0" prefHeight="21.0" prefWidth="83.0" text="Rate">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="item_code_Label" alignment="CENTER_RIGHT" layoutX="8.0" layoutY="259.0" prefHeight="21.0" prefWidth="83.0" text="Item Code">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="item_name_Entry" layoutX="108.0" layoutY="128.0" onKeyPressed="#Enter1" promptText="Item name" />
+      <TextField fx:id="rate_Entry" layoutX="108.0" layoutY="196.0" onKeyPressed="#Enter2" promptText="Rate" />
+      <TextField fx:id="item_code_Entry" layoutX="108.0" layoutY="261.0" onKeyPressed="#Enter3" promptText="Item Code" />
+      <Button layoutX="269.0" layoutY="359.0" mnemonicParsing="false" onAction="#add_button" prefHeight="39.0" prefWidth="89.0" text="Add">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="434.0" layoutY="359.0" mnemonicParsing="false" onAction="#update_button" prefHeight="39.0" prefWidth="95.0" text="Update">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="610.0" layoutY="359.0" mnemonicParsing="false" onAction="#delete_button" prefHeight="39.0" prefWidth="95.0" text="Delete">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Button>
+      <Label fx:id="product_details_label" alignment="CENTER" layoutX="-4.0" layoutY="12.0" prefHeight="61.0" prefWidth="974.0" stylesheets="@style.css" text="Products Details">
+         <font>
+            <Font name="Comic Sans MS Bold Italic" size="43.0" />
+         </font>
+      </Label>
+      <Line endX="645.0" endY="-11.0" layoutX="325.0" layoutY="84.0" startX="-329.0" startY="-11.0" />
+   </children>
+</AnchorPane>

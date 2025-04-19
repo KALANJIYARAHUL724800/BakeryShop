@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.chart.StackedBarChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="666.0" prefWidth="1361.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Frontend.ChartScreenController">
+   <children>
+      <Label alignment="CENTER" layoutX="-2.0" layoutY="17.0" prefHeight="69.0" prefWidth="1359.0" text="Data Analysis">
+         <font>
+            <Font name="MS PGothic" size="47.0" />
+         </font>
+      </Label>
+      <Line endX="1212.0" layoutX="149.0" layoutY="101.0" startX="-165.6666717529297" />
+      <BorderPane layoutX="50.0" layoutY="134.0">
+         <center>
+            <PieChart fx:id="pie_chart" title="Monthly Details" />
+         </center>
+      </BorderPane>
+      <StackedBarChart fx:id="bar_chart" layoutX="776.0" layoutY="138.0" title="Monthly Details">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </StackedBarChart>
+      <Line endX="10.16668701171875" endY="389.0" layoutX="662.0" layoutY="277.0" startX="10.16668701171875" startY="-175.5" />
+      <Button layoutX="286.0" layoutY="577.0" mnemonicParsing="false" onAction="#Refresh_pie_button" prefHeight="37.0" prefWidth="113.0" text="Refresh">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Button>
+      <Button layoutX="979.0" layoutY="572.0" mnemonicParsing="false" onAction="#Refresh_bar_button" prefHeight="37.0" prefWidth="113.0" text="Refresh">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
